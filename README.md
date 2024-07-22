@@ -64,7 +64,7 @@ source ../jedi-bundle/env-setup/gnu-derecho.sh
 make -j8
 ```
 
-Note that sourcing the environment script is necessary every time you enter a new environment, in this case the compute node. The -j8 option tells make to do a parallel build with 8 cores. But it still takes a while.
+Note that sourcing the environment script is necessary every time you enter a new environment, in this case the compute node. The `-j8` option tells make to do a parallel build with 8 cores. But it still takes a while.
 
 When it’s done, it’s time to test. However, 8 cores is not enough to run all the tests. Some of the ensemble tests for the QG model in oops use 13 MPI tasks so these would probably fail if you were to only use 8 cores. Fourteen cores should be sufficient. So, you can exit the previous interactive job and start a new one as follows:
 
