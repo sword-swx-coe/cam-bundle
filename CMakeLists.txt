@@ -50,5 +50,8 @@ if(BUILD_IODA_CONVERTERS)
   ecbuild_bundle( PROJECT iodaconv GIT "https://github.com/jcsda/ioda-converters.git" BRANCH develop UPDATE )
 endif()
 
+# CAM repos
+ecbuild_bundle( PROJECT cam-jedi   GIT "https://github.com/sword-swx-coe/cam-jedi.git" BRANCH develop UPDATE )
+
 ecbuild_bundle_finalize()
 
