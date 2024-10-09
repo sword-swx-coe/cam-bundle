@@ -26,7 +26,7 @@ Now, if you are building on NCAR's Derecho platform, you can load the environmen
 source ../cam-bundle/env-setup/gnu-derecho.sh
 ```
 
-This is assuming your default shell is bash. If you use tcsh, then you would source the gnu-derecho.csh script instead. We have borrowed these scripts and modules from the [MPAS team at NCAR](https://github.com/JCSDA/mpas-bundle), who run JEDI on Derecho regularly. You can read the README file in that maps-bundle link for more tips on how to build and test a jedi bundle on Derecho.
+This is assuming your default shell is bash. If you use tcsh, then you would source the gnu-derecho.csh script instead. We have borrowed these scripts and modules from the [MPAS team at NCAR](https://github.com/JCSDA/mpas-bundle), who run JEDI on Derecho regularly. You can read the README file in that MPAS-bundle link for more tips on how to build and test a jedi bundle on Derecho.
 
 You have source this environment file every time you build and/or run JEDI.
 
