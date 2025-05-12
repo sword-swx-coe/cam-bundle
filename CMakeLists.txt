@@ -32,10 +32,9 @@ set(CMAKE_BUILD_WITH_INSTALL_RPATH ON)
 include( $ENV{jedi_cmake_ROOT}/share/jedicmake/Functions/git_functions.cmake )
 
 #ecbuild_bundle( PROJECT eckit    GIT "https://github.com/ecmwf/eckit.git" TAG 1.24.4 )
-ecbuild_bundle( PROJECT fckit    GIT "https://github.com/ecmwf/fckit.git" TAG 0.11.0 )
-ecbuild_bundle( PROJECT fiat    GIT "https://github.com/ecmwf-ifs/fiat" TAG 1.1.1 )
-ecbuild_bundle( PROJECT ectrans    GIT "https://github.com/ecmwf-ifs/ectrans" TAG 1.2.0 )
-ecbuild_bundle( PROJECT atlas    GIT "https://github.com/ecmwf/atlas.git" TAG 0.40.0 )
+#ecbuild_bundle( PROJECT fckit    GIT "https://github.com/ecmwf/fckit.git" TAG 0.11.0 )
+#ecbuild_bundle( PROJECT fiat    GIT "https://github.com/ecmwf-ifs/fiat" TAG 1.1.1 )
+#ecbuild_bundle( PROJECT ectrans    GIT "https://github.com/ecmwf-ifs/ectrans" TAG 1.2.0 )
 #ecbuild_bundle( PROJECT atlas    GIT "https://github.com/ecmwf/atlas.git" BRANCH develop )
 
 ecbuild_bundle( PROJECT oops     GIT "https://github.com/jcsda/oops.git"        BRANCH develop UPDATE )
@@ -54,7 +53,7 @@ ecbuild_bundle( PROJECT saber    GIT "https://github.com/jcsda/saber.git"       
 #endif()
 
 # CAM repos
-ecbuild_bundle( PROJECT cam-jedi   GIT "https://github.com/sword-swx-coe/cam-jedi.git" BRANCH feature/fields )
+#ecbuild_bundle( PROJECT cam-jedi   GIT "https://github.com/sword-swx-coe/cam-jedi.git" BRANCH feature/fields )
 
 ecbuild_bundle_finalize()
 
