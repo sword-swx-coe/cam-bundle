@@ -29,7 +29,7 @@ set(CMAKE_INSTALL_RPATH_USE_LINK_PATH ON)
 set(CMAKE_BUILD_WITH_INSTALL_RPATH ON)
 
 # Use external jedi-cmake
-include( $ENV{jedi_cmake_ROOT}/share/jedicmake/Functions/git_functions.cmake )
+#include( $ENV{jedi_cmake_ROOT}/share/jedicmake/Functions/git_functions.cmake )
 
 #ecbuild_bundle( PROJECT eckit    GIT "https://github.com/ecmwf/eckit.git" TAG 1.24.4 )
 #ecbuild_bundle( PROJECT fckit    GIT "https://github.com/ecmwf/fckit.git" TAG 0.11.0 )
