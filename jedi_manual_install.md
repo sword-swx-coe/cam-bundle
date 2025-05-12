@@ -313,14 +313,17 @@ spack install nccmp
 spack install fftw
 spack install qhull
 spack install cgal
+spack install mkl
 spack install nlohmann-json
 spack install nlohmann-json-schema-validator
+spack install gsibec
 spack install ecbuild
 spack install eckit
 spack install fckit
 spack install ectrans
 spack install ecmwf-atlas
 spack install odc
+spack install eccodes
 spack install jedi-cmake
 ```
 
@@ -333,43 +336,6 @@ Don't forget to run this to generate the lmod modules after you install any spac
 
 ```bash
 spack module lmod refresh
-```
-
-Here is what my stack is now looking like:
-```bash
-$ module list
-Currently Loaded Modules:
-  1) glibc/2.39-jozorw3            32) sqlite/3.46.0-x4ubs3r
-  2) gcc-runtime/13.3.0-oaqv5fr    33) util-linux-uuid/2.40.4-7tlemxo
-  3) libpciaccess/0.17-sxmfrgq     34) python/3.13.2-qsqq32u
-  4) xz/5.6.3-lqvjjvh              35) boost/1.84.0-jbyxeqi
-  5) zlib-ng/2.2.3-abnf734         36) eigen/3.4.0-mvvpirf
-  6) libxml2/2.13.5-soh5th2        37) lz4/1.10.0-udg5ksl
-  7) ncurses/6.5-6wol2w4           38) snappy/1.2.1-uk2duot
-  8) hwloc/2.11.1-f6iwe64          39) zstd/1.5.6-hpovjud
-  9) openssl/3.4.1-5xhujym         40) c-blosc/1.21.5-jbbalrn
- 10) libevent/2.1.12-tgtj7sp       41) netcdf-c/4.9.2-iees7jj
- 11) numactl/2.0.18-hes3cce        42) netcdf-fortran/4.6.1-ordmma2
- 12) gettext/0.21-exbhth7          43) netcdf-cxx/4.2-i4jkx37
- 13) krb5/1.21.3-ptjmd5k           44) fftw/3.3.10-dumlnad
- 14) libedit/3.1-20240808-4phylvh  45) qhull/2020.2-bovblhc
- 15) libxcrypt/4.4.38-ghfq6yw      46) gmp/6.3.0-6yhdknu
- 16) openssh/9.9p1-cfddelo         47) mpfr/4.2.1-3zlm77u
- 17) pmix/5.0.5-aqlo6ew            48) cgal/4.13-zukmmra
- 18) openmpi/5.0.6-qgnmtub         49) nlohmann-json/3.11.3-xa7o3rg
- 19) pkg-config/0.29.2-gilgf2p     50) nlohmann-json-schema-validator/2.3.0-xtkyryr
- 20) hdf5/1.14.3-efc3vfk           51) perl/5.38.2-6fouk7e
- 21) expat/2.7.0-4kdu7sw           52) ecbuild/3.7.2-bpraljw
- 22) udunits/2.2.28-6cfz7zg        53) eckit/1.28.3-5gof4gk
- 23) nghttp2/1.65.0-pkvgquj        54) fckit/0.13.2-ypenagy
- 24) curl/8.11.1-sky7wqi           55) fiat/1.4.1-i2mplni
- 25) gmake/4.2.1-57pp3cs           56) ectrans/1.5.0-uaz4ens
- 26) cmake/3.27.9-roq2vgv          57) ecmwf-atlas/0.40.0-pubzczp
- 27) openblas/0.3.24-rfbqro2       58) antlr/2.7.7-crz7rzf
- 28) bzip2/1.0.8-kayxh43           59) gsl/2.8-s7yguv6
- 29) readline/8.2-wvrqpsw          60) nco/5.2.4-2y25373
- 30) gdbm/1.24-qxix4vt             61) odc/1.5.2-mmogfvr
- 31) libffi/3.4.6-j33kcgz          62) jedi-cmake/1.4.0-fw5jpjj
 ```
 
 This should be sufficient for ufo and cam-jedi development work.  If time goes on and you find the need to install more things for other components (like ewok and r2d2), then you can always keep addint to your "jedi stack".
@@ -416,13 +382,18 @@ load("nccmp")
 load("qhull")
 load("cgal")
 load("fftw")
+load("intel-oneapi-mkl")
 load("nco")
+load("nlohmann-json")
+load("nlohmann-json-schema-validator")
+load("gsibec")
 
 load("ecbuild")
 load("eckit")
 load("fckit")
 load("ecmwf-atlas")
 load("odc")
+load("eccodes")
 load("jedi-cmake")
 
 whatis("Name: ".. pkgName)
