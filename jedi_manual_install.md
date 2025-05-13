@@ -418,7 +418,49 @@ module load jedi
 module list
 ```
 
-The first module list should produce no items (after the purge).  And the second should load all the modules you had before.  So, in my case, the `module load jedi` command loaded 62 modules.
+The first module list should produce no items (after the purge).  And the second should load all the modules you had before.  So, in my case, the `module load jedi` command loaded 72 modules:
+
+```bash
+$ module list
+
+Currently Loaded Modules:
+  1) glibc/2.39-jozorw3              37) lz4/1.10.0-udg5ksl
+  2) gcc-runtime/13.3.0-oaqv5fr      38) snappy/1.2.1-uk2duot
+  3) nghttp2/1.65.0-pkvgquj          39) zstd/1.5.6-hpovjud
+  4) zlib-ng/2.2.3-abnf734           40) c-blosc/1.21.5-jbbalrn
+  5) openssl/3.4.1-5xhujym           41) netcdf-c/4.9.2-iees7jj
+  6) curl/8.11.1-sky7wqi             42) netcdf-cxx/4.2-i4jkx37
+  7) gmake/4.2.1-57pp3cs             43) netcdf-fortran/4.6.1-ordmma2
+  8) ncurses/6.5-6wol2w4             44) nccmp/1.9.0.1-g73zyjd
+  9) cmake/3.27.9-roq2vgv            45) qhull/2020.2-bovblhc
+ 10) libpciaccess/0.17-sxmfrgq       46) gmp/6.3.0-6yhdknu
+ 11) xz/5.6.3-lqvjjvh                47) mpfr/4.2.1-3zlm77u
+ 12) libxml2/2.13.5-soh5th2          48) cgal/4.13-zukmmra
+ 13) hwloc/2.11.1-f6iwe64            49) fftw/3.3.10-dumlnad
+ 14) libevent/2.1.12-tgtj7sp         50) intel-tbb/2022.0.0-5mwxppr
+ 15) numactl/2.0.18-hes3cce          51) intel-oneapi-mkl/2024.2.2-m5cxg2j
+ 16) gettext/0.21-exbhth7            52) antlr/2.7.7-crz7rzf
+ 17) krb5/1.21.3-ptjmd5k             53) gsl/2.8-s7yguv6
+ 18) libedit/3.1-20240808-4phylvh    54) nco/5.2.4-2y25373
+ 19) libxcrypt/4.4.38-ghfq6yw        55) nlohmann-json/3.11.3-xa7o3rg
+ 20) openssh/9.9p1-cfddelo           56) nlohmann-json-schema-validator/2.3.0-xtkyryr
+ 21) pmix/5.0.5-aqlo6ew              57) sp/2.5.0-ke6dtzk
+ 22) openmpi/5.0.6-qgnmtub           58) gsibec/1.2.1-2tme6dp
+ 23) expat/2.7.0-4kdu7sw             59) perl/5.38.2-6fouk7e
+ 24) udunits/2.2.28-6cfz7zg          60) ecbuild/3.7.2-bpraljw
+ 25) openblas/0.3.24-rfbqro2         61) eckit/1.28.3-5gof4gk
+ 26) bzip2/1.0.8-kayxh43             62) fckit/0.13.2-ypenagy
+ 27) readline/8.2-wvrqpsw            63) fiat/1.4.1-i2mplni
+ 28) gdbm/1.24-qxix4vt               64) ectrans/1.5.0-uaz4ens
+ 29) libffi/3.4.6-j33kcgz            65) ecmwf-atlas/0.40.0-pubzczp
+ 30) sqlite/3.46.0-x4ubs3r           66) odc/1.5.2-mmogfvr
+ 31) util-linux-uuid/2.40.4-7tlemxo  67) libaec/1.0.6-34eghuk
+ 32) python/3.13.2-qsqq32u           68) libpng/1.6.37-x2lysbn
+ 33) boost/1.84.0-jbyxeqi            69) openjpeg/2.3.1-okfssqs
+ 34) eigen/3.4.0-mvvpirf             70) eccodes/2.33.0-nzoqktp
+ 35) pkg-config/0.29.2-gilgf2p       71) jedi-cmake/1.4.0-fw5jpjj
+ 36) hdf5/1.14.3-efc3vfk             72) jedi/gcc
+```
 
 Now, whenever you want to build jedi, you just have to enter `module load jedi` to have all your dependencies ready to go.
 
