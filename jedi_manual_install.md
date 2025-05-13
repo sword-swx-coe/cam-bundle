@@ -131,17 +131,17 @@ As specified in the [spack documentation](https://spack.readthedocs.io/en/latest
 Most of the relevant packages to build the jedi core repositories are in the `configs/common/packages.yaml` file.  So, copy this file over to your personal configuration:
 
 ```bash
-~/jedi/spack-stack:$ cp configs/common/packages.yaml ~/.spack
+cp configs/common/packages.yaml ~/.spack
 ```
 
-Now customizatize your package configuration.  First run these commands to let spack find and then list your compilers:
+Now customize your package configuration.  First run these commands to let spack find and then list your compilers:
 
 ```bash
 spack compiler find
 spack compilers
 ```
 
-For me, this lists `gcc@13.3.0`, which was installed in one of the steps above.  So, this line tells spack to use that compiler to build all the JEDI dependancies and to use openmpi version 5.0.3 for all parallel software that requires mpi.
+For me, this lists `gcc@13.3.0`, which was installed in one of the steps above.  So, this line tells spack to use that compiler to build all the JEDI dependencies and to use openmpi version 5.0.3 for all parallel software that requires mpi.
 
 ```bash
 spack config add "packages:all:compiler:gcc@13.3.0"
