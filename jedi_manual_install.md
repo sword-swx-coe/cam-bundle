@@ -338,7 +338,7 @@ Don't forget to run this to generate the lmod modules after you install any spac
 spack module lmod refresh
 ```
 
-This should be sufficient for ufo and cam-jedi development work.  If time goes on and you find the need to install more things for other components (like ewok and r2d2), then you can always keep addint to your "jedi stack".
+This should be sufficient for ufo and cam-jedi development work.  If time goes on and you find the need to install more things for other components (like ewok and r2d2), then you can always keep adding to your "jedi stack".
 
 Also, you can maintain more than one jedi stack with more than one compiler if you just follow the procedure above for your compiler of choice (e.g. intel or clang instead of gcc).
 
